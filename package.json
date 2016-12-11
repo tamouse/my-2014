@@ -5,5 +5,13 @@
   "main": "index.js",
   "repository": "git@github.com:tamouse/my-2014.git",
   "author": "Tamara Temple <tamouse@gmail.com>",
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "node-sass": "^4.0.0"
+  },
+    "scripts": {
+	"start": "npm run build-css && npm run watch-css",
+	"build-css": "node-sass style.scss style.css",
+	"watch-css": "npm run build-css -- -w"
+    }
 }
